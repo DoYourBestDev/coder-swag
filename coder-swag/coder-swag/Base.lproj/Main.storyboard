@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="68.5" width="375" height="534.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="5ru-ed-9eG" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="141" id="5ru-ed-9eG" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ru-ed-9eG" id="gbw-41-HnO">

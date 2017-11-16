@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Regular</string>
         </array>
@@ -28,15 +31,63 @@
                                 <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gDg-pt-whD">
+                                <rect key="frame" x="0.0" y="68.5" width="375" height="534.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="5ru-ed-9eG" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ru-ed-9eG" id="gbw-41-HnO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="l1V-la-6eu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140.5"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIGITALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCe-K8-dId">
+                                                    <rect key="frame" x="126" y="60" width="123" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="123" id="QGe-5M-VYX"/>
+                                                        <constraint firstAttribute="height" constant="21" id="lBy-wq-FnD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="l1V-la-6eu" secondAttribute="bottom" id="1Wc-ZF-Kq3"/>
+                                                <constraint firstItem="tCe-K8-dId" firstAttribute="centerY" secondItem="gbw-41-HnO" secondAttribute="centerY" id="68d-8c-hmZ"/>
+                                                <constraint firstItem="l1V-la-6eu" firstAttribute="top" secondItem="gbw-41-HnO" secondAttribute="top" id="7Lx-0o-O8c"/>
+                                                <constraint firstAttribute="trailing" secondItem="l1V-la-6eu" secondAttribute="trailing" id="XKz-5J-Cnj"/>
+                                                <constraint firstItem="l1V-la-6eu" firstAttribute="leading" secondItem="gbw-41-HnO" secondAttribute="leading" id="dMW-KF-isf"/>
+                                                <constraint firstItem="tCe-K8-dId" firstAttribute="centerX" secondItem="gbw-41-HnO" secondAttribute="centerX" id="gSC-GH-8sw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="gbw-41-HnO" id="Lbb-M3-NKs"/>
+                                            <outlet property="categoryTitle" destination="tCe-K8-dId" id="3cg-ty-0BB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gDg-pt-whD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2na-Ka-cIR"/>
+                            <constraint firstItem="gDg-pt-whD" firstAttribute="top" secondItem="DwE-VB-4pP" secondAttribute="bottom" constant="15" id="OPc-vf-unx"/>
+                            <constraint firstItem="gDg-pt-whD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YN9-e2-Z8h"/>
                             <constraint firstItem="DwE-VB-4pP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="fT6-2g-Jd3"/>
+                            <constraint firstItem="gDg-pt-whD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qCG-zB-dZ3"/>
                             <constraint firstItem="DwE-VB-4pP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="uy8-Mj-wPJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="CODERSWAG" id="Di4-kz-K2F"/>
+                    <connections>
+                        <outlet property="categoryTable" destination="gDg-pt-whD" id="eyH-M7-iYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,4 +116,7 @@
             <point key="canvasLocation" x="-183" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="digital" width="1024" height="703"/>
+    </resources>
 </document>
